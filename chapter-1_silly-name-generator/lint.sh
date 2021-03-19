@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pylint --rcfile ../config.pylintrc pseudonyms.py
+pylint --rcfile ../config.pylintrc *.py

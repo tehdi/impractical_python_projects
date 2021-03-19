@@ -1,3 +1,3 @@
 #!/bin/sh
 
-pydocstyle pseudonyms.py
+pydocstyle *.py
