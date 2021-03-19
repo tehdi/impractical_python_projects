@@ -1,7 +1,14 @@
 #!/bin/sh
 
-echo Running Pylint:
+echo
+echo "##################"
+echo "# Running Pylint #"
+echo "##################"
 pylint --rcfile ../config.pylintrc *.py
 
-echo Running pydocstyle:
+echo "######################"
+echo "# Running pydocstyle #"
+echo "######################"
 pydocstyle *.py
+
+echo
