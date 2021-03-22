@@ -46,7 +46,8 @@ def main():
         'Baby Oil', 'Beenie-Weenie', 'Stinkbug', 'Lite', 'Clawhammer',
         'Lunch Money', 'Potato Bug', 'Old Scratch', 'Greasy Jim', 'Grunts',
         'Mr Peabody', 'Oil-Can', 'Jimbo', 'Dark Skies', 'Crab Meat',
-        'Pottin Soil', 'The Squirts', 'Jazz Hands', 'The Big News', 'Tinkie Winkie')
+        'Pottin Soil', 'The Squirts', 'Jazz Hands', 'The Big News',
+        'Tinkie Winkie')
 
     last_names = (
         'Appleyard', 'Bigmeat', 'Bloominshine', 'Boogerbottom',
