@@ -14,11 +14,11 @@ echo
 echo "##################"
 echo "# Running Pylint #"
 echo "##################"
-pylint --rcfile ../config.pylintrc ${to_check}
+~/.local/bin/pylint --rcfile ~/config.pylintrc ${to_check}
 
 echo "######################"
 echo "# Running pydocstyle #"
 echo "######################"
-pydocstyle ${to_check}
+~/.local/bin/pydocstyle ${to_check}
 
 echo

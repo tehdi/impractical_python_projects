@@ -1,0 +1,4 @@
+alias lint='~/.local/bin/pylint --rcfile ~/config.pylintrc'
+alias doc='~/.local/bin/pydocstyle'
+alias check='~/bin/check.sh'
+alias run='python3'

@@ -4,5 +4,5 @@
 # drop me into a cmd inside it,
 # then rm the container when I exit
 docker run --rm -ti \
-    -v $(pwd):/home/pythondev/impractical/ \
+    -v $(pwd)/..:/home/pythondev/impractical/ \
     impractical-base
