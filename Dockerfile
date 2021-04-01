@@ -2,10 +2,15 @@
 
 FROM python:3
 
-WORKDIR /usr/src/app
+RUN useradd --shell /bin/bash --create-home --home-dir /home/pythondev pythondev
+USER pythondev
+
+WORKDIR /home/pythondev/
 
 COPY requirements.txt ./
-RUN pip3 install --no-cache-dir -r requirements.txt && rm requirements.txt
+RUN pip3 install --no-warn-script-location --user --no-cache-dir -r requirements.txt \
+    && rm requirements.txt
+COPY config.pylintrc ./
 COPY words /usr/share/dict/words
 
-CMD [ "bash" ]
+CMD [ "/bin/bash" ]
