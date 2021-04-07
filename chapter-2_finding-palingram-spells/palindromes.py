@@ -19,9 +19,9 @@ parser.add_argument('-l', '--min_word_length', type=int, default=1,
 
 def find_palindromes(filename, min_word_length):
     """Print palindromes from a dictionary file."""
-    words = load_dictionary.load(filename)
+    words = load_dictionary.load(filename, min_word_length)
     palindromes = (word for word in words
-                   if _is_valid(word, min_word_length)
+                   if _is_valid(word)
                    and _is_palindrome(word))
 
     print("Palindromes found in {}:".format(filename))
@@ -30,10 +30,9 @@ def find_palindromes(filename, min_word_length):
     print(*palindromes, sep='\n')
 
 
-def _is_valid(word, min_word_length):
+def _is_valid(word):
     return (
-        len(word) >= min_word_length
-        and len(set(word)) > 1
+        len(set(word)) > 1
         and "'" not in word
     )
 

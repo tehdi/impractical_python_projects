@@ -20,8 +20,9 @@ parser.add_argument('-l', '--min_word_length', type=int, default=1,
 
 def find_palingrams(filename, min_word_length):
     """Print palingrams from a dictionary file."""
-    valid_words = set(word for word in load_dictionary.load(filename)
-                      if _is_valid(word, min_word_length))
+    valid_words = set(word for word
+                      in load_dictionary.load(filename, min_word_length)
+                      if _is_valid(word))
 
     palingrams = []
     for word in valid_words:
@@ -36,10 +37,9 @@ def find_palingrams(filename, min_word_length):
     print(*palingrams, sep='\n')
 
 
-def _is_valid(word, min_word_length):
+def _is_valid(word):
     return (
-        len(word) >= min_word_length
-        and len(set(word)) > 1
+        len(set(word)) > 1
         and "'" not in word
     )
 
