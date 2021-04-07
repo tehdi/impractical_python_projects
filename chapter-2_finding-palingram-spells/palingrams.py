@@ -16,8 +16,8 @@ parser.add_argument('-d', '--dictionary', default=DEFAULT_DICTIONARY,
 
 def find_palingrams(filename):
     """Print palingrams from a dictionary file."""
-    valid_words = [word for word in load_dictionary.load(filename)
-                   if _is_valid(word)]
+    valid_words = set(word for word in load_dictionary.load(filename)
+                   if _is_valid(word))
 
     palingrams = []
     for word in valid_words:
