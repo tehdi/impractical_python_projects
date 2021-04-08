@@ -11,6 +11,9 @@ COPY requirements.txt ./
 RUN pip3 install --no-warn-script-location --no-cache-dir --user -r requirements.txt \
     && rm requirements.txt
 
+# make my custom modules available to import without worrying about directory paths
+ENV PYTHONPATH "${PYTHONPATH}:/home/pythondev/impractical"
+
 # add tools and config files
 COPY config.pylintrc ./
 COPY bash_aliases ./.bash_aliases

@@ -8,8 +8,7 @@ palindromes.
 
 # https://docs.python.org/3/library/argparse.html
 import argparse
-# no path needed to import a module from the same directory
-import load_dictionary
+from impractical_modules import load_dictionary
 
 DEFAULT_DICTIONARY = "/home/pythondev/resources/words"
 
