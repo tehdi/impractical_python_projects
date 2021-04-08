@@ -17,6 +17,6 @@ COPY bash_aliases ./.bash_aliases
 COPY check.sh ./bin/
 
 # add project resources
-COPY words ./resources/chapter-2_finding-palingram-spells/
+COPY words ./resources/
 
 CMD [ "/bin/bash" ]

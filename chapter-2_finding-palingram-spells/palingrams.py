@@ -5,8 +5,7 @@ import argparse
 # no path needed to import a module from the same directory
 import load_dictionary
 
-RESOURCE_DIR = "/home/pythondev/resources"
-DEFAULT_DICTIONARY = RESOURCE_DIR + "/chapter-2_finding-palingram-spells/words"
+DEFAULT_DICTIONARY = "/home/pythondev/resources/words"
 
 parser = argparse.ArgumentParser(description='Find some palingrams.')
 parser.add_argument('-d', '--dictionary', default=DEFAULT_DICTIONARY,

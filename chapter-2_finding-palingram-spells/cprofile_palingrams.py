@@ -43,7 +43,7 @@ hundred_thousand_word_dictionary = 'hundred_thousand_words'
 #  ncalls  tottime  percall  cumtime  percall filename:lineno(function)
 #   71863    0.425    0.000    0.780    0.000 palingrams.py:43(_find_palingram)
 # 1160113    0.268    0.000    0.268    0.000 palingrams.py:58(_is_palindrome)
-whole_dictionary = '/home/pythondev/resources/chapter-2_finding-palingram-spells/words'
+whole_dictionary = '/home/pythondev/resources/words'
 
 
 cProfile.run("palingrams.find_palingrams('{}')".format(whole_dictionary))
