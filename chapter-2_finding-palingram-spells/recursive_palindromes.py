@@ -26,7 +26,7 @@ def find_palindromes(filename, min_word_length):
     words = load_dictionary.load(filename, min_word_length)
     palindromes = (word for word in words
                    if _is_valid(word)
-                   and _is_palindrome(word))
+                   and _is_palindrome(word.lower()))
 
     print("Palindromes found in {}:".format(filename))
     # * unpacks args
